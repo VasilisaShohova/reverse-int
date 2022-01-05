@@ -1,12 +1,7 @@
 module.exports = function reverse (n) {
-    const reverse = require('type-reverse');
-    const reversed = reverse(n);
-    const reversedString = reversed.toString();
-    if (reversedString.includes('-')) {
-       const stringWithoutMinus = reversedString.replace('-', '');
-      return parseInt(stringWithoutMinus);
-    }
-    else {
-        return reversed;
-    }
+   
+    const numToString = n.toString().split("").reverse().join("");
+    const reversedNum = parseInt(numToString, 10);
+    return reversedNum;
+
 }
